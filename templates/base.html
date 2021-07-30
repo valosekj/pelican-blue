@@ -89,7 +89,7 @@
     <p class="social">
         {% if SOCIAL %}
             {% for name, link in SOCIAL %}
-                <a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/images/icons/{{ name|lower }}.png"></a>
+                <a href="{{ link }}" title="{{ name }}" target="_blank"><img src="{{ SITEURL }}/theme/images/icons/{{ name|lower }}.png"></a>
             {% endfor %}
         {% endif %}
         {% if FEED_ALL_ATOM %}
