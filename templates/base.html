@@ -83,9 +83,13 @@
                 <li><a class="nav__link" href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
 
-            {% if DISPLAY_PAGES_ON_MENU and pages %}{% for p in pages %}
-                <li><a class="nav__link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-            {% endfor %}{% endif %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/about-me.html">About me</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/publications.html">Publications</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/blog.html">Blog</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/work-with-me.html">Work with me</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/contact-me.html">Contact</a></li>
+            {% endif %}
 
         </ul>
     </nav>
