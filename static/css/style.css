@@ -165,7 +165,6 @@ aside > h2 {
   display: block;
   margin-left: -30px;
   margin-right: -30px;
-  border: 1px solid #f2f2f2;
   margin-top: 40px;
 }
 
@@ -249,6 +248,54 @@ aside > h2 {
   }
 }
 
-img {
+/* Portrait image specific styling */
+aside img[src*="DSC_2617_portrait.png"] {
+  width: 200px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+/* Content images */
+article img {
   max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  aside {
+    left: 0;
+    max-width: none;
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    padding-top: 1px;
+  }
+
+  aside img[src*="DSC_2617_portrait.png"] {
+    width: 150px;
+  }
+
+  .nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  body > article {
+    margin: 0 auto;
+    padding-top: 5px;
+    padding: 1em;
+  }
+
+  footer {
+    padding: 1em;
+    margin-left: 1em;
+    margin-top: 0;
+  }
+
+  #avatar {
+    height: 50px;
+    width: 50px;
+    margin: 10px auto;
+  }
 }
