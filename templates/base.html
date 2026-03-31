@@ -76,24 +76,6 @@
         </script>
     {% endif %}
 
-    <nav class="nav">
-        <ul class="list-bare">
-
-            {% for title, link in MENUITEMS %}
-                <li><a class="nav__link" href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
-
-            {% if DISPLAY_PAGES_ON_MENU %}
-                <li><a class="nav__link" href="{{ SITEURL }}/pages/about-me.html">About me</a></li>
-                <li><a class="nav__link" href="{{ SITEURL }}/pages/publications.html">Publications</a></li>
-                <li><a class="nav__link" href="{{ SITEURL }}/pages/blog.html">Blog</a></li>
-                <li><a class="nav__link" href="{{ SITEURL }}/pages/work-with-me.html">Work with me</a></li>
-                <li><a class="nav__link" href="{{ SITEURL }}/pages/contact-me.html">Contact</a></li>
-            {% endif %}
-
-        </ul>
-    </nav>
-
     <p class="social">
         {% if SOCIAL %}
             {% for name, link in SOCIAL %}
@@ -109,6 +91,25 @@
                 <img src="{{ SITEURL }}/theme/images/icons/rss.png"></a>
         {% endif %}
     </p>
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+            {% for title, link in MENUITEMS %}
+                <li><a class="nav__link" href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+
+            {% if DISPLAY_PAGES_ON_MENU %}
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/about-me.html">About me</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/sciseg.html">SCIseg</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/publications.html">Publications</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/blog.html">Blog</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/work-with-me.html">Work with me</a></li>
+                <li><a class="nav__link" href="{{ SITEURL }}/pages/contact-me.html">Contact</a></li>
+            {% endif %}
+
+        </ul>
+    </nav>
 
     {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
         <h2>Categories</h2>
